@@ -7,6 +7,8 @@ Return: Four integers (separated by spaces) counting the respective number of ti
 
 """
 
+import common
+
 alphabet = ["A", "C", "G", "T"]
 sample_data = "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"
 sample_output = "20 12 17 21"
@@ -35,7 +37,6 @@ def counter_fancy(word):
     return "%s %s %s %s" % (counter["A"], counter["C"], counter["G"], counter["T"])
 
 
-out = counter_fancy(sample_data)
-if out != sample_output:
-    print "YOU MUCKED UP"
-    print out
+common.test(counter_old, sample_data, sample_output)
+
+common.runit(counter_fancy)

@@ -22,4 +22,5 @@ def test(custom_fn, sample_data, sample_output):
         print "YOU MUCKED UP"
         return False
     else:
+        print "Wahey, it workd"
         return True

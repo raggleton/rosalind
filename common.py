@@ -20,6 +20,7 @@ def test(custom_fn, sample_data, sample_output):
     print sample_data
     if sample_output != custom_fn(sample_data):
         print "YOU MUCKED UP"
+        print custom_fn(sample_data)
         return False
     else:
         print "Wahey, it workd"

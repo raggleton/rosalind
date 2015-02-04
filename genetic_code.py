@@ -84,9 +84,7 @@ def code(rna):
         return None
 
     # split into 3-letter words
-    words = []
-    for i in range(0, len(rna), 3):
-        words.append(rna[i:i+3])
+    words = [rna[i: i + 3] for i in range(0, len(rna), 3)]
 
     # change to proteins
     protein = [codon_table[w] for w in words]
